@@ -1,0 +1,21 @@
+body {
+    padding-top: 80px;
+}
+
+/* card section  */
+.card {
+    margin-bottom: 2rem;
+}
+
+.card-text {
+    margin-top: 2rem;
+}
+
+/* footer section */
+footer {
+
+    background-color: rgb(49, 49, 49);
+    padding: 1em 1em;
+    color: rgb(82, 82, 82);
+    text-align: center;
+}
