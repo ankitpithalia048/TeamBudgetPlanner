@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Budget Planner</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Nav -->
+    <!-- <nav class="navbar navbar-inverse bg-inverse fixed-top bg-dark">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Added Services
+                    (<span class="total-count"></span>)</button> &nbsp; <button class="clear-cart btn btn-danger">Clear
+                    Cart</button></div>
+                    <div class="col"><a href="finance.html"></a>Finance Team</div>
+        </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Budget Planner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary bg-light" href="calculate.html"> Calculate Budget
+                        (<span class="total-count"></span>)</a></button>
+                </li>
+                <li> &nbsp; <button class="clear-cart btn btn-danger">Clear
+                        Item</button>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main  -->
+    <div class="container">
+        <h1>Featured Services</h1>
+        <hr><br>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/webd.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" data-name="Web-Development" data-price="10000" onclick="BuyServices();"
+                            class="add-service btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/appd.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">App Development</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" data-name="App-Development" data-price="10000" onclick="BuyServices();"
+                            class="add-service btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/iotml.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">IOT & ML</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" data-name="IOT-ML" data-price="20000" onclick="BuyServices();"
+                            class="add-service btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/devops.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Devops & Transformation</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" data-name="Devops-Transformation" data-price="15000" onclick="BuyServices();"
+                            class="add-service btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/cloud.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Migration</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" data-name="Cloud-Migration" data-price="15000" onclick="BuyServices();"
+                            class="add-service btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/net.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Networking & Storage</h5>
+                        <p class="card-text">A   network service is an application running at the network application
+                            layer and above, that provides data storage, manipulation, presentation, communication or
+                            other capability which is often implemented .......</p>
+                        <a href="#" data-name="Networking-Storage" data-price="15000" onclick="BuyServices();"
+                            class="add-service btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section started -->
+    <footer class="bg-dark text-secondary">
+
+
+        <p>© Copyright Budget Planner</p>
+        <p>Developed By Ankit Pithalia</p>
+
+    </footer>
+
+
+
+    <script>
+        function BuyServices() {
+            alert("Services Added. Click on Calculate Budget to get your Annual Budget!");
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
