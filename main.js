@@ -306,7 +306,7 @@ function displayCart() {
             "<td> Price- " + cartArray[i].price + "</td>"
 
             +
-            "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button> Remove</td>"
+            "<td>Remove  <button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
 
             +
             "</tr>";
